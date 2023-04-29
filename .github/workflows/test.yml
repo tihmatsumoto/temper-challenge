@@ -1,0 +1,12 @@
+name: Test Flow
+
+on: [push, workflow_dispatch]
+
+jobs:
+  e2e-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Cypress run
+      uses: cypress-io/github-action@v5
