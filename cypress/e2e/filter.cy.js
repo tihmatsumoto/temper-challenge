@@ -7,7 +7,7 @@ describe.only('Test Case: Filter', () => {
   });
   
   it('Should filter by price (low to high)', () => {
-    cy.get('.product_sort_container').select('lohi');
+    cy.get('[data-test="product_sort_container"]').select('lohi');
     cy.fixture('inventory_prices').its('item_price').then((prices) => { 
       cy.get('.inventory_item_price').each(($elem, index) => {
         expect($elem).to.have.text(prices[index])
