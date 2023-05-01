@@ -33,6 +33,23 @@ For data, I decided to go with fixtures as it is a simple solution for the issue
 
 Tests are separated by spec/domain/usage, and I decided against adding negative/edge cases just to keep things simple.
 
+### How to run
+
+To install
+```
+yarn
+```
+
+To run headless
+```
+yarn cy:run
+```
+
+To run with cypress runner
+```
+yarn cy:open
+```
+
 ### CI/CD
 
 I created a yaml workflow file that runs tests every push and whenever wanted with workflow_dispatch trigger. Test results can be seen [here](https://github.com/tihmatsumoto/temper-challenge/actions).
