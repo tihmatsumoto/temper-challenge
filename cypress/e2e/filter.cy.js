@@ -1,6 +1,6 @@
 const loginData = require('../fixtures/login.json')
 
-describe.only('Test Case: Filter', () => {
+describe('Test Case: Filter', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.loginAndVerify(loginData.users.standard_user, loginData.password);
